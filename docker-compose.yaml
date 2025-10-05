@@ -1,0 +1,11 @@
+services:
+  web:
+    build: ./web
+    ports:
+      - "5025:5025"
+    depends_on:
+      - db
+  db:
+    build: ./db
+    ports:
+      - "27017:27017"
